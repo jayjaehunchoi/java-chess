@@ -65,7 +65,6 @@ class BoardDaoTest {
 
         Map<String, String> expected = ChessDto.of(new Board(BoardFactory.initialize())).getBoard();
         assertThat(boardDao.getBoard()).isEqualTo(expected);
-        connection.rollback();
     }
 
 }
